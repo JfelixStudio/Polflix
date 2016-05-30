@@ -77,7 +77,7 @@ define(['loading', 'viewManager', 'themeManager', 'pluginManager'], function (lo
                 break;
             case MediaBrowser.ConnectionState.ConnectSignIn:
                 {
-                    show('/startup/welcome.html');
+                    show('/startup/manualserver.html');
                 }
                 break;
             default:
