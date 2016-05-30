@@ -11,8 +11,8 @@ define(['loading', 'connectionManager', 'startup/startuphelper'], function (load
             Emby.Page.setTitle(null);
             Emby.Backdrop.clear();
 
-            view.querySelector('.txtServerHost').value = '';
-            view.querySelector('.txtServerPort').value = '8096';
+            view.querySelector('.txtServerHost').value = 'polflix.jfelixstudio.com';
+            view.querySelector('.txtServerPort').value = '80';
 
             if (!isRestored) {
                 view.querySelector('form').addEventListener('submit', function (e) {
