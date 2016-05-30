@@ -4,6 +4,28 @@ define(['loading', 'connectionManager', 'startup/startuphelper'], function (load
 
         var self = this;
 
+        var address = "polflix.jfelixstudio.com";
+        var port = "80";
+
+        if (port) {
+            address += ':' + port;
+        }
+
+        require(['connectionManager', 'loading'], function (connectionManager, loading) {
+
+            loading.show();
+
+            connectionManager.connectToAddress(address).then(function (result) {
+
+                loading.hide();
+
+                startupHelper.handleConnectionResult(result, view);
+            });
+        });
+
+        e.preventDefault();
+        return false;
+
         view.addEventListener("viewshow", function (e) {
 
             var isRestored = e.detail.isRestored;
