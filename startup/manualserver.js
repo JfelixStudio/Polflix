@@ -38,7 +38,7 @@ define(['loading', 'connectionManager', 'startup/startuphelper'], function (load
 
                     e.preventDefault();
                     return false;
-                });
+                });   
 
                 view.querySelector('.buttonCancel').addEventListener('click', function (e) {
 
